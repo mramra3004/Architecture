@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Architecture.Database
+namespace Architecture.Database.Database
 {
     public sealed class ContextFactory : IDesignTimeDbContextFactory<Context>
     {

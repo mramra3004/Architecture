@@ -1,6 +1,9 @@
 using Architecture.Application;
+using Architecture.Application.User;
 using Architecture.Database;
+using Architecture.Database.Database;
 using Architecture.Infra;
+using Architecture.Infra.Sign;
 using DotNetCore.AspNetCore;
 using DotNetCore.EntityFrameworkCore;
 using DotNetCore.IoC;

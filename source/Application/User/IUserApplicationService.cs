@@ -1,10 +1,11 @@
-using Architecture.Model;
+using Architecture.Model.Sign;
+using Architecture.Model.User;
 using DotNetCore.Objects;
 using DotNetCore.Results;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Architecture.Application
+namespace Architecture.Application.User
 {
     public interface IUserApplicationService
     {

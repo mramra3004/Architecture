@@ -1,11 +1,8 @@
-import { HttpClient, HttpEventType, HttpRequest } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
 import { FileUploadModel } from "../models/file/file.upload.model";
 
 @Injectable({ providedIn: "root" })
 export class AppFileService {
-    constructor(private readonly http: HttpClient) { }
+    constructor(private readonly http: HttpClient) {}
 
     upload(file: File): Observable<FileUploadModel> {
         const formData = new FormData();

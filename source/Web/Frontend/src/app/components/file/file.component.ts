@@ -1,8 +1,6 @@
-import { Component } from "@angular/core";
-import { NG_VALUE_ACCESSOR } from "@angular/forms";
-import { FileModel } from "src/app/models/file/file.model";
-import { FileUploadModel } from "src/app/models/file/file.upload.model";
-import { AppFileService } from "src/app/services/file.service";
+import { FileModel } from "./src/app/models/file/file.model";
+import { FileUploadModel } from "./src/app/models/file/file.upload.model";
+import { AppFileService } from "./src/app/services/file.service";
 import { AppBaseComponent } from "../base/base.component";
 
 @Component({
@@ -18,7 +16,9 @@ export class AppFileComponent extends AppBaseComponent<FileModel[]> {
     uploads = new Array<FileUploadModel>();
 
     change(files: FileList | null) {
-        if (!files) { return; }
+        if (!files) {
+            return;
+        }
 
         for (let index = 0; index < files.length; index++) {
             const file = files.item(index) as File;

@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Architecture.Model
+namespace Architecture.Model.User
 {
     public sealed class AddUserModelValidator : UserModelValidator<AddUserModel>
     {

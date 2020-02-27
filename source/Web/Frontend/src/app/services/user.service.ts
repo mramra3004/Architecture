@@ -1,6 +1,3 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { AppTokenService } from "../core/services/token.service";
 import { SignInModel } from "../models/signIn.model";
 import { TokenModel } from "../models/token.model";
@@ -13,7 +10,8 @@ export class AppUserService {
     constructor(
         private readonly http: HttpClient,
         private readonly router: Router,
-        private readonly appTokenService: AppTokenService) { }
+        private readonly appTokenService: AppTokenService) {
+    }
 
     add(addUserModel: AddUserModel) {
         return this.http.post<number>(`Users`, addUserModel);
@@ -35,7 +33,9 @@ export class AppUserService {
         this.http
             .post<TokenModel>(`Users/SignIn`, signInModel)
             .subscribe((tokenModel) => {
-                if (!tokenModel || !tokenModel.token) { return; }
+                if (!tokenModel || !tokenModel.token) {
+                    return;
+                }
                 this.appTokenService.set(tokenModel.token);
                 this.router.navigate(["/main/home"]);
             });

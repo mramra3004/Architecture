@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Architecture.Application
+namespace Architecture.Application.File
 {
     public sealed class FileApplicationService : IFileApplicationService
     {

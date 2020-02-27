@@ -1,13 +1,16 @@
-import { Input } from "@angular/core";
-import { ControlValueAccessor } from "@angular/forms";
-
 export abstract class AppBaseComponent<TValue> implements ControlValueAccessor {
-    @Input() autofocus = false;
-    @Input() class = "";
-    @Input() disabled = false;
-    @Input() formControlName!: string;
-    @Input() required = false;
-    @Input() text = "";
+    @Input()
+    autofocus = false;
+    @Input()
+    class = "";
+    @Input()
+    disabled = false;
+    @Input()
+    formControlName!: string;
+    @Input()
+    required = false;
+    @Input()
+    text = "";
 
     private onChange!: (value: TValue) => void;
 
@@ -18,7 +21,9 @@ export abstract class AppBaseComponent<TValue> implements ControlValueAccessor {
     }
 
     set value(value: TValue) {
-        if (this.value === value) { return; }
+        if (this.value === value) {
+            return;
+        }
 
         this._value = value;
 
@@ -32,7 +37,7 @@ export abstract class AppBaseComponent<TValue> implements ControlValueAccessor {
     }
 
     // tslint:disable-next-line: no-empty
-    registerOnTouched(_: () => void) { }
+    registerOnTouched(_: () => void) {}
 
     writeValue(value: TValue) {
         this.value = value;

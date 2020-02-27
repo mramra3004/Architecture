@@ -1,4 +1,4 @@
-namespace Architecture.Model
+namespace Architecture.Model.User
 {
     public sealed class FullNameModel
     {

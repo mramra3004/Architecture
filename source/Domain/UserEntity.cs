@@ -1,4 +1,6 @@
 using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
+using Architecture.Domain.ValueObjects;
 using DotNetCore.Domain;
 using System.Collections.Generic;
 
@@ -14,7 +16,7 @@ namespace Architecture.Domain
             Sign sign,
             Status status
         )
-        : base(id)
+            : base(id)
         {
             FullName = fullName;
             Email = email;
@@ -22,13 +24,15 @@ namespace Architecture.Domain
             Status = status;
         }
 
-        public UserEntity(long id) : base(id) { }
+        public UserEntity(long id) : base(id)
+        {
+        }
 
         public FullName FullName { get; private set; }
 
         public Email Email { get; private set; }
 
-        public Sign Sign { get; private set; }
+        public Sign Sign { get; }
 
         public Status Status { get; private set; }
 

@@ -1,7 +1,9 @@
 using Architecture.Domain;
 using DotNetCore.Repositories;
 
-namespace Architecture.Database
+namespace Architecture.Database.UserLog
 {
-    public interface IUserLogRepository : IRepository<UserLogEntity> { }
+    public interface IUserLogRepository : IRepository<UserLogEntity>
+    {
+    }
 }

@@ -1,4 +1,4 @@
-namespace Architecture.Model
+namespace Architecture.Model.Sign
 {
     public class SignInModel
     {

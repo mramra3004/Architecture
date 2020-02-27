@@ -1,7 +1,7 @@
-using Architecture.Model;
+using Architecture.Model.Sign;
 using DotNetCore.Results;
 
-namespace Architecture.Infra
+namespace Architecture.Infra.Sign
 {
     public interface ISignService
     {

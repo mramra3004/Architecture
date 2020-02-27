@@ -1,7 +1,7 @@
 using DotNetCore.Validation;
 using FluentValidation;
 
-namespace Architecture.Model
+namespace Architecture.Model.User
 {
     public class UserModelValidator<T> : Validator<T> where T : UserModel
     {

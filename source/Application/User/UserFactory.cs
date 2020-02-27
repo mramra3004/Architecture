@@ -1,7 +1,9 @@
 using Architecture.Domain;
-using Architecture.Model;
+using Architecture.Domain.ValueObjects;
+using Architecture.Model.Sign;
+using Architecture.Model.User;
 
-namespace Architecture.Application
+namespace Architecture.Application.User
 {
     public static class UserFactory
     {

@@ -1,11 +1,13 @@
 using DotNetCore.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Architecture.Database
+namespace Architecture.Database.Database
 {
     public sealed class Context : DbContext
     {
-        public Context(DbContextOptions options) : base(options) { }
+        public Context(DbContextOptions options) : base(options)
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,8 +1,3 @@
-import { HttpClient } from "@angular/common/http";
-import { Component } from "@angular/core";
-import { NG_VALUE_ACCESSOR } from "@angular/forms";
-import { Observable } from "rxjs";
-import { flatMap, map, toArray } from "rxjs/operators";
 import { OptionModel } from "../option.model";
 import { AppSelectComponent } from "../select.component";
 

@@ -1,8 +1,8 @@
-using Architecture.Model;
+using Architecture.Model.UserLog;
 using DotNetCore.Results;
 using System.Threading.Tasks;
 
-namespace Architecture.Application
+namespace Architecture.Application.UserLog
 {
     public interface IUserLogApplicationService
     {

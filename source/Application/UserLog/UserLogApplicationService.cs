@@ -1,9 +1,10 @@
-using Architecture.Database;
-using Architecture.Model;
+using Architecture.Database.Database;
+using Architecture.Database.UserLog;
+using Architecture.Model.UserLog;
 using DotNetCore.Results;
 using System.Threading.Tasks;
 
-namespace Architecture.Application
+namespace Architecture.Application.UserLog
 {
     public sealed class UserLogApplicationService : IUserLogApplicationService
     {
@@ -24,10 +25,7 @@ namespace Architecture.Application
         {
             var validation = new UserLogModelValidator().Validate(userLogModel);
 
-            if (validation.Failed)
-            {
-                return Result.Fail(validation.Message);
-            }
+            if (validation.Failed) return Result.Fail(validation.Message);
 
             var userLogEntity = UserLogFactory.Create(userLogModel);
 

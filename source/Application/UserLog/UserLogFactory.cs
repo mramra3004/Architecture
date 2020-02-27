@@ -1,8 +1,9 @@
-using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
 using Architecture.Domain;
-using Architecture.Model;
+using Architecture.Model.Sign;
+using Architecture.Model.UserLog;
 
-namespace Architecture.Application
+namespace Architecture.Application.UserLog
 {
     public static class UserLogFactory
     {

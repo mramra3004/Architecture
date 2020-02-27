@@ -1,6 +1,3 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppSelectUserComponent } from "./user.component";
 
 @NgModule({
@@ -16,4 +13,5 @@ import { AppSelectUserComponent } from "./user.component";
         ReactiveFormsModule
     ]
 })
-export class AppSelectUserModule { }
+export class AppSelectUserModule {
+}

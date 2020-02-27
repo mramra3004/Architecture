@@ -1,6 +1,4 @@
-using Architecture.CrossCutting;
-
-namespace Architecture.Model
+namespace Architecture.Model.User
 {
     public class UserModel
     {

@@ -1,4 +1,3 @@
-import { NgModule } from "@angular/core";
 import { AppLabelComponent } from "./label.component";
 
 @NgModule({
@@ -9,4 +8,5 @@ import { AppLabelComponent } from "./label.component";
         AppLabelComponent
     ]
 })
-export class AppLabelModule { }
+export class AppLabelModule {
+}

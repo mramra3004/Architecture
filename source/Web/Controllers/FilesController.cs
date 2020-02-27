@@ -1,4 +1,4 @@
-using Architecture.Application;
+using Architecture.Application.File;
 using DotNetCore.AspNetCore;
 using DotNetCore.Objects;
 using Microsoft.AspNetCore.Hosting;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Architecture.Web
+namespace Architecture.Web.Controllers
 {
     [ApiController]
     [RouteController]

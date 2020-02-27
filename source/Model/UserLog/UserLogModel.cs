@@ -1,6 +1,6 @@
-using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
 
-namespace Architecture.Model
+namespace Architecture.Model.UserLog
 {
     public class UserLogModel
     {

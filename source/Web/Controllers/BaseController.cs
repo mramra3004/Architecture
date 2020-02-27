@@ -1,11 +1,11 @@
-using Architecture.CrossCutting;
-using Architecture.Model;
+using Architecture.CrossCutting.Enums;
+using Architecture.Model.Sign;
 using DotNetCore.AspNetCore;
 using DotNetCore.Extensions;
 using DotNetCore.Results;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Architecture.Web
+namespace Architecture.Web.Controllers
 {
     public abstract class BaseController : ControllerBase
     {

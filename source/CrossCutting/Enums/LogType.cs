@@ -1,4 +1,4 @@
-namespace Architecture.CrossCutting
+namespace Architecture.CrossCutting.Enums
 {
     public enum LogType
     {

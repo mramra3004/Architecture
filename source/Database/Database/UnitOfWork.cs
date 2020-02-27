@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Architecture.Database
+namespace Architecture.Database.Database
 {
     public sealed class UnitOfWork : IUnitOfWork
     {

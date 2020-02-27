@@ -1,6 +1,6 @@
-using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
 using Architecture.CrossCutting.Resources;
-using Architecture.Model;
+using Architecture.Model.Sign;
 using DotNetCore.Extensions;
 using DotNetCore.Results;
 using DotNetCore.Security;
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Architecture.Infra
+namespace Architecture.Infra.Sign
 {
     public class SignService : ISignService
     {
@@ -49,17 +49,11 @@ namespace Architecture.Infra
 
         public IResult Validate(SignModel signModel, SignInModel signInModel)
         {
-            if (signModel == default || signInModel == default)
-            {
-                return Result.Fail(Texts.LoginPasswordInvalid);
-            }
+            if (signModel == default || signInModel == default) return Result.Fail(Texts.LoginPasswordInvalid);
 
             var password = _hashService.Create(signInModel.Password, signModel.Salt);
 
-            if (signModel.Password != password)
-            {
-                return Result.Fail(Texts.LoginPasswordInvalid);
-            }
+            if (signModel.Password != password) return Result.Fail(Texts.LoginPasswordInvalid);
 
             return Result.Success();
         }

@@ -1,10 +1,9 @@
-import { Input, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
 import { AppBaseComponent } from "../base/base.component";
 import { OptionModel } from "./option.model";
 
 export abstract class AppSelectComponent extends AppBaseComponent<any> implements OnInit {
-    @Input() child!: AppSelectComponent;
+    @Input()
+    child!: AppSelectComponent;
 
     options = new Array<OptionModel>();
 
@@ -33,13 +32,17 @@ export abstract class AppSelectComponent extends AppBaseComponent<any> implement
     }
 
     private changeChildren(clearValue: boolean = false) {
-        if (!this.child) { return; }
+        if (!this.child) {
+            return;
+        }
 
         let child = this.child;
 
         while (child) {
             child.clearOptions();
-            if (clearValue) { child.value = undefined; }
+            if (clearValue) {
+                child.value = undefined;
+            }
             child = child.child;
         }
 

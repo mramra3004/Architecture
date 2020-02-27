@@ -1,6 +1,3 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppInputTextComponent } from "./text.component";
 
 @NgModule({
@@ -16,4 +13,5 @@ import { AppInputTextComponent } from "./text.component";
         ReactiveFormsModule
     ]
 })
-export class AppInputTextModule { }
+export class AppInputTextModule {
+}

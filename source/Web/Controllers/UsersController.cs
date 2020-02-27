@@ -1,13 +1,14 @@
-using Architecture.Application;
-using Architecture.CrossCutting;
-using Architecture.Model;
+using Architecture.Application.User;
+using Architecture.CrossCutting.Enums;
+using Architecture.Model.Sign;
+using Architecture.Model.User;
 using DotNetCore.AspNetCore;
 using DotNetCore.Objects;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Architecture.Web
+namespace Architecture.Web.Controllers
 {
     [ApiController]
     [RouteController]
@@ -46,7 +47,7 @@ namespace Architecture.Web
         }
 
         [HttpGet("Grid")]
-        public async Task<IActionResult> ListAsync([FromQuery]PagedListParameters parameters)
+        public async Task<IActionResult> ListAsync([FromQuery] PagedListParameters parameters)
         {
             return Result(await _userApplicationService.ListAsync(parameters));
         }

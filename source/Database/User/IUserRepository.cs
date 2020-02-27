@@ -1,9 +1,10 @@
 using Architecture.Domain;
-using Architecture.Model;
+using Architecture.Model.Sign;
+using Architecture.Model.User;
 using DotNetCore.Repositories;
 using System.Threading.Tasks;
 
-namespace Architecture.Database
+namespace Architecture.Database.User
 {
     public interface IUserRepository : IRepository<UserEntity>
     {

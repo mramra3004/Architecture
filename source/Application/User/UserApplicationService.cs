@@ -1,7 +1,10 @@
-using Architecture.Database;
+using Architecture.Application.UserLog;
+using Architecture.Database.Database;
+using Architecture.Database.User;
 using Architecture.Domain;
-using Architecture.Infra;
-using Architecture.Model;
+using Architecture.Infra.Sign;
+using Architecture.Model.Sign;
+using Architecture.Model.User;
 using DotNetCore.Mapping;
 using DotNetCore.Objects;
 using DotNetCore.Results;
@@ -9,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Architecture.Application
+namespace Architecture.Application.User
 {
     public sealed class UserApplicationService : IUserApplicationService
     {

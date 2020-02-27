@@ -1,5 +1,5 @@
-﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace Architecture.Database.Migrations
 {
@@ -8,14 +8,14 @@ namespace Architecture.Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "User");
+                "User");
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                "Users",
                 schema: "User",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
+                    Id = table.Column<long>()
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 100, nullable: true),
                     Surname = table.Column<string>(maxLength: 200, nullable: true),
@@ -24,30 +24,27 @@ namespace Architecture.Database.Migrations
                     Password = table.Column<string>(maxLength: 500, nullable: true),
                     Salt = table.Column<string>(maxLength: 500, nullable: true),
                     Roles = table.Column<int>(nullable: true),
-                    Status = table.Column<int>(nullable: false)
+                    Status = table.Column<int>()
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Users", x => x.Id); });
 
             migrationBuilder.CreateTable(
-                name: "UsersLogs",
+                "UsersLogs",
                 schema: "User",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
+                    Id = table.Column<long>()
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<long>(nullable: false),
-                    LogType = table.Column<int>(nullable: false),
-                    DateTime = table.Column<DateTime>(nullable: false)
+                    UserId = table.Column<long>(),
+                    LogType = table.Column<int>(),
+                    DateTime = table.Column<DateTime>()
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UsersLogs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UsersLogs_Users_UserId",
-                        column: x => x.UserId,
+                        "FK_UsersLogs_Users_UserId",
+                        x => x.UserId,
                         principalSchema: "User",
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -58,10 +55,15 @@ namespace Architecture.Database.Migrations
                 schema: "User",
                 table: "Users",
                 columns: new[] { "Id", "Status", "Email", "Name", "Surname", "Login", "Password", "Roles", "Salt" },
-                values: new object[] { 1L, 1, "administrator@administrator.com", "Administrator", "Administrator", "admin", "O34uMN1Vho2IYcSM7nlXEqn57RZ8VEUsJwH++sFr0i3MSHJVx8J3PQGjhLR3s5i4l0XWUnCnymQ/EbRmzvLy8uMWREZu7vZI+BqebjAl5upYKMMQvlEcBeyLcRRTTBpYpv80m/YCZQmpig4XFVfIViLLZY/Kr5gBN5dkQf25rK8=", 3, "79005744-e69a-4b09-996b-08fe0b70cbb9" });
+                values: new object[]
+                {
+                    1L, 1, "administrator@administrator.com", "Administrator", "Administrator", "admin",
+                    "O34uMN1Vho2IYcSM7nlXEqn57RZ8VEUsJwH++sFr0i3MSHJVx8J3PQGjhLR3s5i4l0XWUnCnymQ/EbRmzvLy8uMWREZu7vZI+BqebjAl5upYKMMQvlEcBeyLcRRTTBpYpv80m/YCZQmpig4XFVfIViLLZY/Kr5gBN5dkQf25rK8=",
+                    3, "79005744-e69a-4b09-996b-08fe0b70cbb9"
+                });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_Email",
+                "IX_Users_Email",
                 schema: "User",
                 table: "Users",
                 column: "Email",
@@ -69,7 +71,7 @@ namespace Architecture.Database.Migrations
                 filter: "[Email] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_Login",
+                "IX_Users_Login",
                 schema: "User",
                 table: "Users",
                 column: "Login",
@@ -77,7 +79,7 @@ namespace Architecture.Database.Migrations
                 filter: "[Login] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersLogs_UserId",
+                "IX_UsersLogs_UserId",
                 schema: "User",
                 table: "UsersLogs",
                 column: "UserId");
@@ -86,12 +88,12 @@ namespace Architecture.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "UsersLogs",
-                schema: "User");
+                "UsersLogs",
+                "User");
 
             migrationBuilder.DropTable(
-                name: "Users",
-                schema: "User");
+                "Users",
+                "User");
         }
     }
 }

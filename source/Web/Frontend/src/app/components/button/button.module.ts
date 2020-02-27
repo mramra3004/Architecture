@@ -1,4 +1,3 @@
-import { NgModule } from "@angular/core";
 import { AppButtonComponent } from "./button.component";
 
 @NgModule({
@@ -9,4 +8,5 @@ import { AppButtonComponent } from "./button.component";
         AppButtonComponent
     ]
 })
-export class AppButtonModule { }
+export class AppButtonModule {
+}

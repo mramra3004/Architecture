@@ -1,8 +1,8 @@
-using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
 using Architecture.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Architecture.Database
+namespace Architecture.Database.Database
 {
     public static class ContextSeed
     {
@@ -38,7 +38,8 @@ namespace Architecture.Database
                 {
                     UserEntityId = 1L,
                     Login = "admin",
-                    Password = "O34uMN1Vho2IYcSM7nlXEqn57RZ8VEUsJwH++sFr0i3MSHJVx8J3PQGjhLR3s5i4l0XWUnCnymQ/EbRmzvLy8uMWREZu7vZI+BqebjAl5upYKMMQvlEcBeyLcRRTTBpYpv80m/YCZQmpig4XFVfIViLLZY/Kr5gBN5dkQf25rK8=",
+                    Password =
+                        "O34uMN1Vho2IYcSM7nlXEqn57RZ8VEUsJwH++sFr0i3MSHJVx8J3PQGjhLR3s5i4l0XWUnCnymQ/EbRmzvLy8uMWREZu7vZI+BqebjAl5upYKMMQvlEcBeyLcRRTTBpYpv80m/YCZQmpig4XFVfIViLLZY/Kr5gBN5dkQf25rK8=",
                     Salt = "79005744-e69a-4b09-996b-08fe0b70cbb9",
                     Roles = Roles.User | Roles.Admin
                 });

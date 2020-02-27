@@ -1,6 +1,3 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
 import { AppListComponent } from "./list.component";
 
 const routes: Routes = [
@@ -15,4 +12,5 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class AppListModule { }
+export class AppListModule {
+}

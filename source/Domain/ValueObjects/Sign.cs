@@ -1,8 +1,8 @@
-using Architecture.CrossCutting;
+using Architecture.CrossCutting.Enums;
 using DotNetCore.Domain;
 using System.Collections.Generic;
 
-namespace Architecture.Domain
+namespace Architecture.Domain.ValueObjects
 {
     public sealed class Sign : ValueObject
     {

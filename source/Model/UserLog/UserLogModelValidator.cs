@@ -1,7 +1,7 @@
 using DotNetCore.Validation;
 using FluentValidation;
 
-namespace Architecture.Model
+namespace Architecture.Model.UserLog
 {
     public sealed class UserLogModelValidator : Validator<UserLogModel>
     {

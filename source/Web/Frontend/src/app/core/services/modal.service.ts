@@ -1,5 +1,3 @@
-import { Injectable } from "@angular/core";
-
 declare let UIkit: any;
 
 @Injectable({ providedIn: "root" })

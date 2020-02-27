@@ -1,5 +1,3 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
 import { AppHomeComponent } from "./home.component";
 
 const routes: Routes = [
@@ -13,4 +11,5 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class AppHomeModule { }
+export class AppHomeModule {
+}

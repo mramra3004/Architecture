@@ -1,5 +1,3 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
 import { AppRouteGuard } from "./core/guards/route.guard";
 import { AppLayoutMainComponent } from "./layouts/layout-main/layout-main.component";
 import { AppLayoutComponent } from "./layouts/layout/layout.component";
@@ -45,4 +43,5 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -1,6 +1,6 @@
 using System;
 
-namespace Architecture.CrossCutting
+namespace Architecture.CrossCutting.Enums
 {
     [Flags]
     public enum Roles

@@ -2,7 +2,7 @@ using Architecture.CrossCutting.Resources;
 using DotNetCore.Validation;
 using FluentValidation;
 
-namespace Architecture.Model
+namespace Architecture.Model.Sign
 {
     public sealed class SignInModelValidator : Validator<SignInModel>
     {

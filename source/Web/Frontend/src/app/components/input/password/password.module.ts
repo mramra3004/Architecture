@@ -1,6 +1,3 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppInputPasswordComponent } from "./password.component";
 
 @NgModule({
@@ -16,4 +13,5 @@ import { AppInputPasswordComponent } from "./password.component";
         ReactiveFormsModule
     ]
 })
-export class AppInputPasswordModule { }
+export class AppInputPasswordModule {
+}

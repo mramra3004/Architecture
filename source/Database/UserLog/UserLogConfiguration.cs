@@ -2,7 +2,7 @@ using Architecture.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Architecture.Database
+namespace Architecture.Database.UserLog
 {
     public sealed class UserLogConfiguration : IEntityTypeConfiguration<UserLogEntity>
     {

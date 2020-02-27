@@ -1,4 +1,6 @@
-namespace Architecture.Model
+using Architecture.Model.Sign;
+
+namespace Architecture.Model.User
 {
     public class AddUserModel : UserModel
     {
